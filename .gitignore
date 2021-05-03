@@ -1,0 +1,18 @@
+.DS_Store
+logs
+*.log
+npm-debug.log*
+
+# runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# editor specific
+.vscode
+.editorconfig
+
+# other
+/node_modules
+.cache

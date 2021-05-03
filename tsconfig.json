@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"alwaysStrict": true,
+		"declaration": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"jsx": "react-jsx",
+		"importHelpers": true,
+		"isolatedModules": true,
+		"lib": ["DOM", "ESNext"],
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"noEmitOnError": true,
+		"outDir": "dist",
+		"pretty": true,
+		"strict": true,
+		"target": "ES5"
+	},
+	"include": ["src/**/*"]
+}
