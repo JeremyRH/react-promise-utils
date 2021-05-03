@@ -15,5 +15,5 @@ pids
 
 # other
 .cache
-/node_modules
+node_modules
 /tests/dist
