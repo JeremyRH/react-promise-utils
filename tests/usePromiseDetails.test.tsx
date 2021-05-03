@@ -39,8 +39,8 @@ assertPromiseRendered(Promise.resolve(1), [PromiseStatus.FULFILLED, 1]);
 
 // Update promise before it settles.
 (async () => {
-	const slowPromise = new Promise((resolve) => setTimeout(resolve, 1, 'slow'));
 	const fastPromise = Promise.resolve('fast');
+	const slowPromise = new Promise((resolve) => setTimeout(resolve, 1, 'slow'));
 
 	// Slow promise should resolve last.
 	let resolvedLast;
