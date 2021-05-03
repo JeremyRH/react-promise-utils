@@ -13,7 +13,7 @@ assert.equal(typeof getPromiseDetails, 'function');
 
 // Rejected promise.
 (async () => {
-	const error = new Error('rejected promise test');
+	const error = new Error('getPromiseDetails rejected promise test');
 	const willReject = Promise.reject(error);
 	assert.deepEqual(getPromiseDetails(willReject), [PromiseStatus.PENDING, undefined]);
 

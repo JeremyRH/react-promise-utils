@@ -8,14 +8,16 @@ export function usePromiseDetails<T>(promise: Promise<T>) {
 	useEffect(() => {
 		let isStale = false;
 
+		function update() {
+			// Don't update if new promise was passed in or component unmounted.
+			if (!isStale) {
+				forceRender();
+			}
+		}
+
 		// Force a rerender after promise settles.
 		if (details[0] === PromiseStatus.PENDING) {
-			promise.finally(() => {
-				// Don't update if new promise was passed in or component unmounted.
-				if (!isStale) {
-					forceRender();
-				}
-			});
+			promise.then(update, update);
 		}
 
 		return () => {

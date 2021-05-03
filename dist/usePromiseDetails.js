@@ -8,14 +8,15 @@ function usePromiseDetails(promise) {
     var details = getPromiseDetails_1.getPromiseDetails(promise);
     react_1.useEffect(function () {
         var isStale = false;
+        function update() {
+            // Don't update if new promise was passed in or component unmounted.
+            if (!isStale) {
+                forceRender();
+            }
+        }
         // Force a rerender after promise settles.
         if (details[0] === getPromiseDetails_1.PromiseStatus.PENDING) {
-            promise.finally(function () {
-                // Don't update if new promise was passed in or component unmounted.
-                if (!isStale) {
-                    forceRender();
-                }
-            });
+            promise.then(update, update);
         }
         return function () {
             isStale = true;
