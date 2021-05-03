@@ -1,11 +1,14 @@
-export var PromiseStatus;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getPromiseDetails = exports.PromiseStatus = void 0;
+var PromiseStatus;
 (function (PromiseStatus) {
     PromiseStatus[PromiseStatus["PENDING"] = 0] = "PENDING";
     PromiseStatus[PromiseStatus["FULFILLED"] = 1] = "FULFILLED";
     PromiseStatus[PromiseStatus["REJECTED"] = 2] = "REJECTED";
-})(PromiseStatus || (PromiseStatus = {}));
+})(PromiseStatus = exports.PromiseStatus || (exports.PromiseStatus = {}));
 var detailsKey = Symbol();
-export function getPromiseDetails(promise) {
+function getPromiseDetails(promise) {
     var statefulPromise = promise;
     if (statefulPromise.hasOwnProperty(detailsKey)) {
         return statefulPromise[detailsKey];
@@ -18,3 +21,4 @@ export function getPromiseDetails(promise) {
     });
     return statefulPromise[detailsKey];
 }
+exports.getPromiseDetails = getPromiseDetails;

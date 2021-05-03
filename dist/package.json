@@ -2,6 +2,7 @@
   "name": "react-promise-utils",
   "version": "0.1.0",
   "description": "Minimalist utils for handling loading states.",
+  "type": "commonjs",
   "license": "MIT",
   "homepage": "https://github.com/JeremyRH/react-promise-utils",
   "repository": {
@@ -12,7 +13,8 @@
     "github.com/JeremyRH"
   ],
   "scripts": {
-    "build": "node -e \"fs.promises.rmdir('dist', { recursive: true })\" && tsc && node -e \"fs.promises.copyFile('package.json', 'dist/package.json')\""
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js"
   },
   "peerDependencies": {
     "react": ">=16.8"
