@@ -1,29 +1,3 @@
-/*
-Component that accepts a promise and render callback to be called when the promise is fulfilled.
-Accepts an optional fallback.
-
-Basic usage:
-
-const [itemsP, setItemsP] = useState(() => fetchItems());
-<Resolve promise={itemsP} render={(items) => (
-	<ItemsList items={items} />
-)} />
-
-
-With fallback:
-
-const [itemsP, setItemsP] = useState(() => fetchItems());
-<Resolve
-	promise={itemsP}
-	fallback={(lastChildren) => (
-		<SpinnerOverlay>{lastChildren}</SpinnerOverlay>
-	)}
-	render={(items) => (
-		<ItemsList items={items} />
-	)}
-/>
-*/
-
 import { useLayoutEffect, useRef } from 'react';
 import { PromiseStatus } from './getPromiseDetails';
 import { usePromiseDetails } from './usePromiseDetails';
