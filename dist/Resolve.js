@@ -1,31 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var jsx_runtime_1 = require("react/jsx-runtime");
-/*
-Component that accepts a promise and render callback to be called when the promise is fulfilled.
-Accepts an optional fallback.
-
-Basic usage:
-
-const [itemsP, setItemsP] = useState(() => fetchItems());
-<Resolve promise={itemsP} render={(items) => (
-    <ItemsList items={items} />
-)} />
-
-
-With fallback:
-
-const [itemsP, setItemsP] = useState(() => fetchItems());
-<Resolve
-    promise={itemsP}
-    fallback={(lastChildren) => (
-        <SpinnerOverlay>{lastChildren}</SpinnerOverlay>
-    )}
-    render={(items) => (
-        <ItemsList items={items} />
-    )}
-/>
-*/
 var react_1 = require("react");
 var getPromiseDetails_1 = require("./getPromiseDetails");
 var usePromiseDetails_1 = require("./usePromiseDetails");

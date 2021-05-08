@@ -1,6 +1,6 @@
 {
   "name": "react-promise-utils",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Minimalist utils for handling loading states and async values in React.",
   "keywords": ["react", "promise", "async", "minimal", "zero", "dependencies", "helpers"],
   "type": "commonjs",

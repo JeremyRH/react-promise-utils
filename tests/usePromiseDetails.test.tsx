@@ -44,8 +44,8 @@ assertPromiseRendered(Promise.resolve(1), [PromiseStatus.FULFILLED, 1]);
 
 	// Slow promise should resolve last.
 	let resolvedLast;
-	slowPromise.then((v) => resolvedLast = v);
-	fastPromise.then((v) => resolvedLast = v);
+	slowPromise.then((v) => (resolvedLast = v));
+	fastPromise.then((v) => (resolvedLast = v));
 
 	// Use slow promise first.
 	const renderer = create(<ComponentUsingHook promise={slowPromise} />);
